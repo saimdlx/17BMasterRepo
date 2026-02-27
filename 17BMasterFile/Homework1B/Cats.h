@@ -1,11 +1,13 @@
+/* 
+ * File:   Cats.cpp
+ * Author: Saim Ahmed
+ * Created on: February 25, 2026
+ * Purpose:  Cats Class Header File
+ */
+
 #ifndef CATS_h
 #define CATS_h
 #include <string>
-
-/*
-Name: Saim Ahmed
-File Purpose: Cats Class Header File
-*/
 
 class Cats{
     public:

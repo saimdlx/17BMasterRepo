@@ -1,11 +1,14 @@
+/* 
+ * File:   Cats.cpp
+ * Author: Saim Ahmed
+ * Created on: February 25, 2026
+ * Purpose:  Cats Class Initialization File
+ */
+
+//System Libraries Here
 #include "Cats.h"
 #include <iostream>
 using namespace std;
-
-/*
-Name: Saim Ahmed
-File Purpose: Cats Class File
-*/
 
 void Cats::setWeight(int weight){
     this->weight = weight;

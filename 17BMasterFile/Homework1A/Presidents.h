@@ -1,18 +1,20 @@
+/* 
+ * File:   Presidents.h
+ * Author: Saim Ahmed
+ * Created on: February 25, 2026
+ * Purpose:  Presidents Class Header File
+ */
+
 #ifndef PRESIDENTS_H
 #define PRESIDENTS_H
 #include <string>
 
-/*
-Name: Saim Ahmed
-File Purpose: Presidents Class Header File
-*/
-
 class Presidents {
 
     public:
-        int number;
-        std::string name;
-        std::string quote;
+        int number = 0;
+        std::string name = "";
+        std::string quote = "";
     
         Presidents();
         ~Presidents();

@@ -1,17 +1,24 @@
+/* 
+ * File:   main.cpp
+ * Author: Saim Ahmed
+ * Created on: February 25, 2026
+ * Purpose:  Cats Class Source File
+ */
+
+//System Libraries Here
 #include "Cats.h"
 #include <iostream>
 using namespace std;
 
-/*
-Name: Saim Ahmed
-File Purpose: Cats Class Source File
-*/
-
-int main(){
-
+//Program Execution Begins Here
+int main() {
+    
+    //Create named cat objects
     Cats Fluffy, Tom, Kitty;
-    int weight;
-    string color;
+    int weight = 0;
+    string color = "";
+
+    //Prompt user for information about weight and color
     cout << "So you have three cats...";
     cout << "\n";
 
@@ -54,6 +61,8 @@ int main(){
 
     cout << "\n";
 
+    //Display Cat attributes
+
     cout << "Fluffy ";
     Fluffy.displayInfo();
     cout << "Tom";
@@ -72,3 +81,24 @@ int main(){
 
     return 0;
 }
+
+/*
+Output:
+So you have three cats...
+Describe Fluffy. What does she weigh? 4
+What color is she? brown
+
+Describe Tom. What does he weigh? 9
+What color is he? orange
+
+Describe Kitty. What does she weigh? 5
+What color is she? white
+
+Fluffy  weighs 4 pounds and is brown.
+Tom weighs 9 pounds and is orange.
+Kitty weighs 5 pounds and is white.
+
+Fluffy says: MEOW!
+Tom says: MEOW!
+Kitty says: MEOW!
+*/
