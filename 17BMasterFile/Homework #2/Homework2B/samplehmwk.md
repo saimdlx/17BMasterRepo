@@ -1,7 +1,7 @@
 Sample Homework Markdown
 // ================================================================
 // Programmer: Saim Ahmed
-// Class: CS17B
+// Class: CIS17B
 // Instructor: Med Mogasemi
 // ================================================================
 // Program: (Leave blank for user)
