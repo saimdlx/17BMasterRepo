@@ -1,13 +1,10 @@
 Sample Homework
-// Attached: HW_8(A,B)
-// File: HW_8.pdf
 // ================================================================
-// Programmer: Kevin Salcido Gonzalez
-// Class: CS1B
+// Programmer: Saim Ahmed
+// Class: CS17B
 // Instructor: Med Mogasemi
-//
 // ================================================================
-// Program: HW_8 #2
+// Program: (Leave blank for user)
 // ================================================================
 // Program Description:
 // Student Records Display
