@@ -162,14 +162,14 @@ ProductPtr createProduct()
     cin >> inputQuantity;
 
     // Dynamic Allocation
-    ProductPtr freshProd = new Product;
-    freshProd->productID = inputID;
-    freshProd->productName = inputName;
-    freshProd->productCategory = inputCategory;
-    freshProd->productPrice = inputPrice;
-    freshProd->productQuantity = inputQuantity;
+    ProductPtr cProd = new Product;
+    cProd->productID = inputID;
+    cProd->productName = inputName;
+    cProd->productCategory = inputCategory;
+    cProd->productPrice = inputPrice;
+    cProd->productQuantity = inputQuantity;
 
-    return freshProd;
+    return cProd;
 }
 
 // ================================================================
@@ -252,3 +252,41 @@ void deleteAll(vector<ProductPtr> &products)
     }
     products.clear();
 }
+/* Program Output Using Assignment Input
+===== Inventory System =====
+1. Add Product
+2. Display Products
+3. Exit
+Enter choice: 1
+
+Enter Product ID: 500
+Enter Product Name: Laptop
+Select Category (1-4):
+1. ELECTRONICS
+2. GROCERY
+3. CLOTHING
+4. OFFICE
+Enter choice: 1
+Enter Price: 899.99
+Enter Quantity: 10
+Product added successfully!
+
+===== Inventory System =====
+1. Add Product
+2. Display Products
+3. Exit
+Enter choice: 2
+
+Product ID: 500
+Product Name: Laptop
+Product Category: Electronics
+Product Price: 899.99
+Product Quantity: 10
+
+===== Inventory System =====
+1. Add Product
+2. Display Products
+3. Exit
+Enter choice: 3
+Goodbye!
+*/

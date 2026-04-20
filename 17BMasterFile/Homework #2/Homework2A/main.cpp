@@ -18,6 +18,7 @@ using namespace std;
 // =================================================================
 // Enum: Major
 // - Represents the different majors a student can enroll in.
+// - Values: CS (1), ENGINEERING (2), MATH (3), PHYSICS (4)
 // =================================================================
 enum Major
 {
@@ -150,12 +151,12 @@ StudentPtr createStudent()
     cout << "Enter GPA: ";
     cin >> gpa;
 
-    StudentPtr p1 = new Student;
-    p1->id = id;
-    p1->name = name;
-    p1->gpa = gpa;
-    p1->major = m;
-    return p1;
+    StudentPtr cStudent = new Student;
+    cStudent->id = id;
+    cStudent->name = name;
+    cStudent->gpa = gpa;
+    cStudent->major = m;
+    return cStudent;
 }
 
 // =================================================================
@@ -242,3 +243,41 @@ void deleteAll(vector<StudentPtr> &students)
     }
     students.clear();
 }
+
+/* Program Output Using Assignment Input
+===== Student Registration System =====
+1. Add Student
+2. Display All Students
+3. Exit
+Enter choice: 1
+
+Enter ID: 101
+Enter name: Alice
+Select Major:
+1. CS
+2. ENGINEERING
+3. MATH
+4. PHYSICS
+Enter choice: 1
+Enter GPA: 3.8
+Student Added Successfully!
+
+===== Student Registration System =====
+1. Add Student
+2. Display All Students
+3. Exit
+Enter choice: 2
+
+ID: 101
+Name: Alice
+Major: Computer Science
+GPA: 3.8
+-----------------------
+
+===== Student Registration System =====
+1. Add Student
+2. Display All Students
+3. Exit
+Enter choice: 3
+Goodbye!
+*/

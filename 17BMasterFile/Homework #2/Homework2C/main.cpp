@@ -150,13 +150,13 @@ PatientPtr createPatient()
     cout << "Enter Bill Amount: ";
     cin >> inputAmount;
 
-    PatientPtr freshPatient = new Patient;
-    freshPatient->pID = inputID;
-    freshPatient->pName = inputName;
-    freshPatient->pCondition = inputCondition;
-    freshPatient->pAmount = inputAmount;
+    PatientPtr cPatient = new Patient;
+    cPatient->pID = inputID;
+    cPatient->pName = inputName;
+    cPatient->pCondition = inputCondition;
+    cPatient->pAmount = inputAmount;
 
-    return freshPatient;
+    return cPatient;
 }
 
 // ================================================================
@@ -252,3 +252,51 @@ void deleteAll(vector<PatientPtr> &patients)
     }
     patients.clear();
 }
+/* Program Output Using Assignment Input
+==== Hospital System ====
+1. Add Patient
+2. Display Patients
+3. Show Total Hospital Bills
+4. Exit
+Enter choice: 1
+
+Enter Patient ID: 900
+Enter Patient Name: John
+Select Condition (1-3):
+1. STABLE
+2. SERIOUS
+3. CRITICAL
+Enter choice: 2
+Enter Bill Amount: 4500.75
+
+Patient added successfully!
+
+==== Hospital System ====
+1. Add Patient
+2. Display Patients
+3. Show Total Hospital Bills
+4. Exit
+Enter choice: 2
+
+Patient ID: 900
+Patient Name: John
+Patient Condition: Serious
+Patient Pending Bill: 4500.75
+
+==== Hospital System ====
+1. Add Patient
+2. Display Patients
+3. Show Total Hospital Bills
+4. Exit
+Enter choice: 3
+
+Total Hospital Bills Pending: 4500.75
+
+==== Hospital System ====
+1. Add Patient
+2. Display Patients
+3. Show Total Hospital Bills
+4. Exit
+Enter choice: 4
+Goodbye.
+*/
