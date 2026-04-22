@@ -59,14 +59,14 @@ You must overload:
 
 **Comparison Operators**
 
-- \>
+- >
 - <
-- \==
+- ==
 
 **Stream Operators**
 
 - << (Output operator)
-- \>> (Input operator)
+- >> (Input operator)
 
 The << operator must display objects in this format:
 

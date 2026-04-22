@@ -18,9 +18,9 @@ class Presidents {
     
         Presidents();
         ~Presidents();
-        void setNumber(int newNumber);
-        void setName(std::string newName);
-        void setQuote(std::string newQuote);
+        void setNumber(int);
+        void setName(std::string);
+        void setQuote(std::string);
         void displayPresidents();
 };
 #endif

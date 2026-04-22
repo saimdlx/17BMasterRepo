@@ -34,7 +34,7 @@ monthlyProc:
 
 A virtual function that subtracts the monthly service charges from the balance, calls the calcInt function, then sets the variables that hold the number of withdrawals, number of deposits, and monthly service charges to zero.
 
-Next, design a savings account class, derived from the generic account class. The savings account class should have the following additional member:
+Next, design a SAVINGS ACCOUNT class, derived from the generic account class. The savings account class should have the following additional member:
 
 status (to represent an active or inactive account)
 
@@ -67,3 +67,72 @@ Write a complete program that demonstrates these classes by asking the user to e
 Note:
 
 You may need to add more member variables and functions to the classes than those listed above.
+
+Sample Output:
+
+******** BANK ACCOUNT MENU ********
+1. Savings Account Deposit
+2. Checking Account Deposit
+3. Savings Account Withdrawal
+4. Checking Account Withdrawal
+5. Update and Display Account Statistics
+6. Exit
+Your choice, please: (1-6) 1
+Enter amount to deposit: 1000.25
+******** BANK ACCOUNT MENU ********
+1. Savings Account Deposit
+2. Checking Account Deposit
+3. Savings Account Withdrawal
+4. Checking Account Withdrawal
+5. Update and Display Account Statistics
+6. Exit
+Your choice, please: (1-6) 2
+Enter amount to deposit: 563.25
+******** BANK ACCOUNT MENU ********
+1. Savings Account Deposit
+2. Checking Account Deposit
+3. Savings Account Withdrawal
+4. Checking Account Withdrawal
+5. Update and Display Account Statistics
+6. Exit
+Your choice, please: (1-6) 3
+Enter amount to withdraw: 53.98
+Account is inactive.
+******** BANK ACCOUNT MENU ********
+1. Savings Account Deposit
+2. Checking Account Deposit
+3. Savings Account Withdrawal
+4. Checking Account Withdrawal
+5. Update and Display Account Statistics
+6. Exit
+Your choice, please: (1-6) 4
+Enter amount to withdraw: 257.36
+******** BANK ACCOUNT MENU ********
+1. Savings Account Deposit
+2. Checking Account Deposit
+3. Savings Account Withdrawal
+4. Checking Account Withdrawal
+5. Update and Display Account Statistics
+6. Exit
+Your choice, please: (1-6) 5
+SAVINGS ACCOUNT MONTHLY STATISTICS:
+Withdrawals: 0
+Deposits: 1
+Service Charges: 0.00
+Ending Balance: 1004.42
+Press a key to continue...
+CHECKING ACCOUNT MONTHLY STATISTICS:
+Withdrawals: 1
+Deposits: 1
+Service Charges: 5.10
+Ending Balance: 302.06
+Press a key to continue...
+******** BANK ACCOUNT MENU ********
+1. Savings Account Deposit
+2. Checking Account Deposit
+3. Savings Account Withdrawal
+4. Checking Account Withdrawal
+5. Update and Display Account Statistics
+6. Exit
+Your choice, please: (1-6) 6
+Process finished with exit code 0
