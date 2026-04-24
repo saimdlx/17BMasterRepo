@@ -195,4 +195,4 @@ First == Second : true
 - Incorrect postfix increment return value
 - Not handling negative inches correctly
 - Comparing only feet and ignoring inches
-- Forgetting to make &lt;< and &gt;> friend functions
+- Forgetting to make << and >> friend functions

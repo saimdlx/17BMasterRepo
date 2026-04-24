@@ -8,6 +8,7 @@
 
 //System Libraries Here
 #include <iostream>
+#include <FeetInches.h>
 using namespace std;
 
 //User Libraries Here
@@ -15,20 +16,18 @@ using namespace std;
 //Global Variables
 
 //Function Prototypes Here
-string setString(int);
 
 //Program Execution Begins Here
 int main() {
-    int num = 1;
-    string foo = setString(num);
-    cout << foo << endl;
-    return 0;
-}
+    
+    int F = 5;
+    int I = -2;
 
-string setString(int newWord){
-    string newVal = "";
-    if (newWord == 1){
-        newVal = "Not a banana";
-    }
-    return newVal;
+    int tot = ((F * 12) + I);
+    int newF = tot / 12;
+    int newI = tot % 12;
+
+    cout << newF << " Feet " <<  newI << " Inches " << endl;
+
+    return 0;
 }
