@@ -58,10 +58,10 @@ int main() {
     // 1. Process Logs
     parseLogFile(logFile);
 
-    /*
+    
     // 2. Process Contacts (using same file for this assignment)
     extractContactInfo(logFile);
-
+    /*
     // 3. Generate Reports
     printLogAnalysisReport();
     printContactExtractionReport();
@@ -98,7 +98,6 @@ void parseLogFile(const string& filename) {
     
     while (getline(file, line))
     {
-        cout << line << endl;
         // Step 1: Use regex_search to identify log components
         regex_search(line, matches, fetch);
         // Step 2: Store valid/invalid matches for reporting
@@ -126,12 +125,49 @@ void parseLogFile(const string& filename) {
  * Extract: Emails, Phone numbers, URLs, Physical Addresses
  */
 void extractContactInfo(const string& filename) {
-    /*
-       TODO: Implement regex for:
-       - Phone: (555) 123-4567, 555-123-4567
-       - URL: https://example.com
-       - Address: City, State ZIP (e.g., Los Angeles, CA 90001)
-    */
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error: Could not open " << filename << endl;
+        return;
+    }
+
+    string line;
+    // Regex patterns
+    regex emailPattern(R"([\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,})");
+    regex phonePattern(R"((\(\d{3}\)\s*|\d{3}-)\d{3}-\d{4})");
+    regex urlPattern(R"(https?://\S+)");
+    regex addressPattern(R"([A-Za-z\s]+,\s*[A-Z]{2}\s*\d{5})");
+
+    // Containers
+    vector<string> emails, phones, urls, addresses;
+
+    while (getline(file, line)) {
+        // Extraction using sregex_iterator per line
+        auto eBegin = sregex_iterator(line.begin(), line.end(), emailPattern);
+        for (auto i = eBegin; i != sregex_iterator(); ++i) {
+            emails.push_back(i->str());
+        }
+        auto pBegin = sregex_iterator(line.begin(), line.end(), phonePattern);
+        for (auto i = pBegin; i != sregex_iterator(); ++i) {
+            phones.push_back(i->str());
+        }
+        auto uBegin = sregex_iterator(line.begin(), line.end(), urlPattern);
+        for (auto i = uBegin; i != sregex_iterator(); ++i) {
+            urls.push_back(i->str());
+        }
+        auto aBegin = sregex_iterator(line.begin(), line.end(), addressPattern);
+        for (auto i = aBegin; i != sregex_iterator(); ++i) {
+            addresses.push_back(i->str());
+        }
+    }
+
+    // Report counts
+    cout << "Emails found: " << emails.size() << endl;
+    cout << "Phones found: " << phones.size() << endl;
+    cout << "URLs found: " << urls.size() << endl;
+    cout << "Addresses found: " << addresses.size() << endl;
+
+    file.close();
 }
 
 /**
